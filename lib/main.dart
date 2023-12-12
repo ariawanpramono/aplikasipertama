@@ -15,27 +15,45 @@ class AppPertama extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Aplikasi Pertama'),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Container(
-                height: 225,
+        body: Column(
+          children: <Widget>[
+            Flexible(
+              flex: 1,
+              child: Container(
                 margin: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blue[300],
                 ),
               ),
-              Container(
-                height: 225,
+            ),
+            Flexible(
+              flex: 2,
+              child: Container(
                 margin: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue[300],
-                ),
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 1,
+                        spreadRadius: 1,
+                      )
+                    ]),
               ),
-            ],
-          ),
+            ),
+            // Flexible(
+            //   flex: 1,
+            //   child: Container(
+            //     margin: const EdgeInsets.all(15),
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(10),
+            //       color: Colors.blue[300],
+            //     ),
+            //   ),
+            // ),
+          ],
         ),
       ),
     );
